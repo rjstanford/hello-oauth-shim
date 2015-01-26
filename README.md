@@ -12,7 +12,8 @@ A Java Servlet version of [MrSwitch/node-oauth-shim](https://github.com/MrSwitch
 To configure the servlet, you currently need to pass in a list of public-token/private-secret pairs (whever you want, but before they're used). I'll update it to support a helper class for more dynamic configration, but this actually works well for many projects.
 
 ```java
-  HelloOAuthShimServlet.addSecret(publicKey, privateKey); // Do this for each social network you want to support
+  // Do this for each social network you want to support
+  HelloOAuthShimServlet.addSecret(publicKey, privateKey); 
 ```
 
 To start it simply include it as a servlet, either in your web.xml file:
