@@ -9,6 +9,10 @@ A Java Servlet version of [MrSwitch/node-oauth-shim](https://github.com/MrSwitch
 </dependency>
 ```
 
+I've avoided bringing in any significant outside dependencies other than my own tiny HTTP utility library so you shouldn't experience any conflicts.  It does expect to find the javax.servlet and javax.json APIs somewhere in your classpath.
+
+I am using the org.slf4j API for logging. If you don't configure it, no logging will occur and no errors will be thrown. If you'd like some log output, see http://slf4j.org/manual.html for the configuration details.
+
 To configure the servlet, you currently need to pass in a list of public-token/private-secret pairs (whever you want, but before they're used). I'll update it to support a helper class for more dynamic configration, but this actually works well for many projects.
 
 ```java
