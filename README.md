@@ -30,7 +30,7 @@ To start it simply include it as a servlet, either in your web.xml file:
     </servlet-mapping>
 ```
 
-Or programattically:
+Or programmatically:
 
 ```java
     	ServletHolder servlet = new ServletHolder("Hello", HelloOAuthShimServlet.class);
