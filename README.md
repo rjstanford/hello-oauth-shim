@@ -23,23 +23,23 @@ To configure the servlet, you currently need to pass in a list of public-token/p
 To start it simply include it as a servlet, either in your web.xml file:
 
 ```xml
-    <servlet>
-        <servlet-name>Hello</servlet-name>
-        <servlet-class>cc.protea.foundation.webhooks.hello.HelloOAuthShimServlet</servlet-class>
-    </servlet>
+<servlet>
+    <servlet-name>Hello</servlet-name>
+    <servlet-class>cc.protea.foundation.webhooks.hello.HelloOAuthShimServlet</servlet-class>
+</servlet>
 
-    <servlet-mapping>
-        <servlet-name>Hello</servlet-name>
-        <url-pattern>/helloshim</url-pattern>
-    </servlet-mapping>
+<servlet-mapping>
+    <servlet-name>Hello</servlet-name>
+    <url-pattern>/helloshim</url-pattern>
+</servlet-mapping>
 ```
 
 Or programmatically:
 
 ```java
-    	ServletHolder servlet = new ServletHolder("Hello", HelloOAuthShimServlet.class);
-    	servlet.setAsyncSupported(true);
-    	context.addServlet(servlet, "/helloshim/*");
+ServletHolder servlet = new ServletHolder("Hello", HelloOAuthShimServlet.class);
+servlet.setAsyncSupported(true);
+context.addServlet(servlet, "/helloshim/*");
 ```
 
 Then once its configured, update your [hello.js](https://github.com/MrSwitch/hello.js) initialization:
@@ -55,4 +55,4 @@ hello.init({
 });
 ```
 
-Those of you looking at the code will notice some odd constructs, particularly around the use of Map<String, String> - I was trying to strike a balance between more standard Java conventions and copying the code from the original project.  As I build up a bigger library of tests a lot of this may be refactored over time (or not - this way it is going to be somewhat easier to bring modifications forward from the JS version and there are many cases where the contracts for inputs and outputs are a little unclear).    
+Those of you looking at the code will notice some odd constructs, particularly around the use of `Map<String, String>` - I was trying to strike a balance between more standard Java conventions and copying the code from the original project.  As I build up a bigger library of tests a lot of this may be refactored over time (or not - this way it is going to be somewhat easier to bring modifications forward from the JS version and there are many cases where the contracts for inputs and outputs are a little unclear).    
