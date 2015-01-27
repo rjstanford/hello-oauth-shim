@@ -54,3 +54,5 @@ hello.init({
 	oauth_proxy  : 'http://yourserver:yourport/helloshim'
 });
 ```
+
+Those of you looking at the code will notice some odd constructs, particularly around the use of Map<String, String> - I was trying to strike a balance between more standard Java conventions and copying the code from the original project.  As I build up a bigger library of tests a lot of this may be refactored over time (or not - this way it is going to be somewhat easier to bring modifications forward from the JS version and there are many cases where the contracts for inputs and outputs are a little unclear).    
