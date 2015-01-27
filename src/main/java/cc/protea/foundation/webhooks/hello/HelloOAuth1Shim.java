@@ -12,9 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import cc.protea.foundation.webhooks.hello.HelloOAuthShimProxy;
-import cc.protea.foundation.webhooks.hello.HelloOAuthShimServlet;
-import cc.protea.foundation.webhooks.hello.HelloOAuthUtils;
 import cc.protea.util.http.Request;
 import cc.protea.util.http.Response;
 
