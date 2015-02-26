@@ -74,9 +74,9 @@ public class HelloOAuth1Shim {
 		Response response = null;
 
 		try {
-			System.out.println("Request:  " + signedUrl);
+			System.out.println("OA1 Request:  " + signedUrl);
 			response = new Request(signedUrl).getResource();
-			System.out.println("Response: " + response.getBody());
+			System.out.println("OA1 Response: " + response.getBody());
 		} catch (IOException e) {
 			HelloOAuthUtils.error(parameters.get("redirect_uri"), "server_error", "Unable to connect to " + signedUrl, parameters.get("state"), resp);
 			return;
@@ -156,9 +156,9 @@ public class HelloOAuth1Shim {
 		Response response = null;
 
 		try {
-			System.out.println("Request:  " + signedUrl);
+			System.out.println("OA1 Request:  " + signedUrl);
 			response = new Request(signedUrl).getResource();
-			System.out.println("Response: " + response.getBody());
+			System.out.println("OA1 Response: " + response.getBody());
 		} catch (IOException e) {
 			HelloOAuthUtils.error(parameters.get("redirect_uri"), "server_error", "Unable to connect to " + signedUrl, parameters.get("state"), resp);
 			return;

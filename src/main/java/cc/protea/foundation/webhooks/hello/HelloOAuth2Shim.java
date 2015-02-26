@@ -43,9 +43,7 @@ public class HelloOAuth2Shim {
 		Response response = null;
 
 		try {
-			System.out.println("Request:  " + grantUrl);
 			response = request.postResource();
-			System.out.println("Response: " + response.getBody());
 		} catch (IOException e) {
 			HelloOAuthUtils.error(parameters.get("redirect_uri"), "server_error", "Unable to connect to " + grantUrl, parameters.get("state"), resp);
 			return;
